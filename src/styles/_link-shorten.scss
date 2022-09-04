@@ -1,0 +1,109 @@
+.link {
+  display: flex;
+  flex-direction: column;
+  margin-block: 5em;
+
+  &-input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: $dark-violet;
+    padding: 2em;
+    border-radius: 1em;
+    margin-bottom: 2em;
+
+    background-image: url(../images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+
+    button {
+      padding: 0.75em;
+      border-radius: 0.5em;
+    }
+  }
+
+  &-result {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 0.5em;
+
+    &-short {
+      color: $cyan;
+      border-top: 1px solid $gray;
+      padding-top: 1em;
+    }
+
+    button {
+      border-radius: 0.5em;
+    }
+  }
+}
+
+.error {
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  color: $red;
+  font-size: 1rem;
+  font-style: italic;
+
+  &.active {
+    background: none;
+    display: block;
+  }
+}
+
+.link-field {
+  padding: 0.75em;
+  color: $dark-violet;
+  border-radius: 0.5em;
+  border: none;
+
+  &.active {
+    background: white;
+    outline: 2px solid $red;
+  }
+}
+
+@media (min-width: 700px) {
+  .link {
+    margin-block: 10em;
+    gap: 1em;
+
+    &-input {
+      flex-direction: row;
+      gap: 2em;
+      padding: 3em;
+
+      background-image: url(../images/bg-shorten-desktop.svg);
+      background-position: bottom;
+      background-size: cover;
+
+      input {
+        width: 100%;
+        padding: 1em;
+      }
+
+      button {
+        width: 250px;
+      }
+    }
+
+    &-result {
+      flex-direction: row;
+      align-items: center;
+
+      &-short {
+        margin-left: auto;
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+}

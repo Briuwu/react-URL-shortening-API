@@ -1,0 +1,86 @@
+.card {
+
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+
+    :nth-child(1) {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    :nth-child(2) {
+      color: $gray;
+      margin-bottom: 5em;
+    }
+  }
+
+  &-all {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 7em;
+    margin: 1em;
+
+    &-each {
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 0.5em;
+      padding: 3em 1em;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+
+
+      &-img {
+        position: absolute;
+        background-color: $dark-violet;
+        padding: 1.5em;
+        border-radius: 50%;
+        top: -50px;
+      }
+
+      :nth-child(2) {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      
+      :nth-child(3) {
+        color: $gray;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    margin-block: 5em;
+
+    &-all {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 3em;
+
+      &-each {
+        align-items: flex-start;
+        text-align: left;
+        margin-top: 4em;
+        padding: 2em;
+
+      }
+
+      :nth-child(1) {
+        margin-top: 0;
+      }
+
+      :nth-child(2) {
+        margin-top: 2em;
+      }
+    }
+  }
+}

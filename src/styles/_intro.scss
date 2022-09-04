@@ -1,0 +1,60 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1.25em;
+
+    h1 {
+      line-height: 1.25;
+      font-size: 2.75rem;
+      color: $very-dark-violet;
+      margin-top: 1em;
+    }
+
+    p {
+      color: $gray;
+      font-size: 1.25rem;
+      line-height: 1.75;
+    }
+
+    button {
+      padding: 1em 2.5em;
+      border-radius: 2em;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .intro {
+    margin-top: 3em;
+    flex-direction: row-reverse;
+
+    &-details {
+      text-align: left;
+      align-items: flex-start;
+
+      h1 {
+        font-size: 5rem;
+        margin-top: 0;
+      }
+
+      p {
+        font-size: 1.5rem;
+        width: 90%;
+        line-height: 1.5;
+        margin-bottom: 0.5em;
+      }
+
+      button {
+        padding: 1em 3em;
+      }
+    }
+  }
+}
