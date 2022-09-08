@@ -5,6 +5,7 @@
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
+LINK: [https://briuwu-url-shortening.netlify.app/](https://briuwu-url-shortening.netlify.app/)
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
